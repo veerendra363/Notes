@@ -1,3 +1,4 @@
+[<<<](./index.md)
 # Normalization
 
 >Normalization is the process of effectively designing a database such that we can minimize data redundancy(Repetition of similar data).
