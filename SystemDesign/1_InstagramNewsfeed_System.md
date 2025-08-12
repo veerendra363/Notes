@@ -50,5 +50,24 @@ Total read requests = DAU * No.of times opens * No.of postes viewed each time
                     = 500M * 10 * 10  
                     = 50 Billion read requests per day  
 
+**3. Storage**  
+According to functional requirements we are going to store the post, following, likes, and comments.  
+There are three kind of posts - video,  image, text  
+Lets assume
+1. avg size of video post is 20 MB and 20% of DAU post videos
+2. avg size of image post is 0.5MB and 60% of DAU post images
+3. avg size of text post is 100KB and 20% of DAU post text
+4. follow data 16 bytes per follow
+5. Activity data(like/commnet) 216 bytes per activity
 
+Storage per post per day = 0.2 * 50M * 20MB + 0.6 * 50M * 0.5MB + 0.2 * 50M * 100KB   
+                         = 200TB + 15TB + 1TB  
+                         = 216TB per day  
+Storage per following per day = 71.4M * 16bytes   
+                              = 1.15 GB per day  
+Storage per activity(like / comment) = 1.5B *216 bytes  
+                                     = 300 GB per day  
+Total required storage required per day = 216TB + 1.15GB + 300GB  
+                                        = 216.3 TB per day  
 
+Storage per 10 years = 216.3 TB * 365 * 10 = 720 PB
