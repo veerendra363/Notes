@@ -71,3 +71,26 @@ Total required storage required per day = 216TB + 1.15GB + 300GB
                                         = 216.3 TB per day  
 
 Storage per 10 years = 216.3 TB * 365 * 10 = 720 PB
+
+**4. Cache Memory**
+The amount of cache required is 1% of daily storage  
+Amount of cache memory = 0.01 * 216TB = 2.16TB  
+
+**5. Network/Bandwith**
+- Data flowing into out system per second is also known as Ingress
+- Data flowing out of our system persecond is also known as Egress
+
+****Ingress**** = Data comming in a day / seconds in a day  
+        = 216TB / (24*60*60)
+        = 2.5GB/sec
+Note 216TB we have calculated above  
+
+Average size of the post = (0.2 * 100KB) + (0.6*0.5MB) + (0.2*20MB) (This calculation based on the assumptions in the storage sections)  
+                         = 4.32MB  
+The amount of data going out in a day = no.of read requests per day * avg size of post  
+                                      = 50B * 4.32MB  
+                                      = 216PB / Day  
+****Egress**** = the amount of data going out in a day / seconds in a day  
+       = 216PB / (24*60*60)  
+       = 2.5TB/sec  
+
