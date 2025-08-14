@@ -193,4 +193,14 @@ Generator service -> feeds cache
 6. Its addeds this new post to all his/her followers in the feeds DB.
 7. Then addeds same thing in the feeds cache for speed access.
 
-Now Read service gets the feed from cache or feedsDB
+Now Read service gets the feed from cache or feedsDB  
+
+**High Level Design For Video/Image Post**  
+The video or image post is performed in two steps.  
+In frist step video or image needs to added to the object storage and get the pre signed url.
+seconde step is same like the text post  
+
+Step 1 High level design:  
+client -> API gateway -> load balancer -> Pre signed url generator -> object storage -> send pre signed url back to client  
+  
+Step 2 High level design same as the text post design  
